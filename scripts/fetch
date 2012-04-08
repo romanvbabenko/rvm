@@ -57,7 +57,7 @@ if ! builtin command -v curl > /dev/null ; then
 
 elif [[ ! -z ${rvm_proxy} ]] ; then
 
-  fetch_command="curl -x${rvm_proxy} -f -L --create-dirs -C - " # -s for silent
+  fetch_command="curl -x${rvm_proxy} -k -f -L --create-dirs -C - " # -s for silent
 
 else
 
